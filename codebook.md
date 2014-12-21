@@ -8,8 +8,10 @@ It contains 79 mean computations of the smoothed results of the original HAR res
 
 The original research smoothed accelerometer and gyroscope 3-axial raw signals produced 30 individual subjects wearing a wasteband mounted smart phone while performing 6 standardized activities.  The raw data was captured a a constant rate of 50 Hz and then filtered using:
 
-<b>A median filter and
-<b>A 3rd order low pass Butterworth filter with a corner frequency of 20 Hz
+<ul>
+<li>A median filter and</li>
+<li>A 3rd order low pass Butterworth filter with a corner frequency of 20 Hz</li>
+</ul>
 
 The raw acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
@@ -68,8 +70,9 @@ tBodyGyroJerkMean
 
 ### Column Definitions
 
-<b>subjectId</b>: A unique integer with a range of 1 to 30 representing individual subjects
-<b>activity</b>: A factor with 6 levels translated from the original research.  Levels:
+<ul>
+<li><b>subjectId</b>: A unique integer with a range of 1 to 30 representing individual subjects</li>
+<li><b>activity</b>: A factor with 6 levels translated from the original research.  Levels:
 <ol>
 <li>WALKING</li>
 <li>WALKING_UPSTAIRS</li>
@@ -78,4 +81,6 @@ tBodyGyroJerkMean
 <li>STANDING</li>
 <li>LAYING</li>
 </ol>
-<b>feature</b>: The remaining 79 columns are the mean of selected smoothed sensor data produced by the original research.  To enable transparency and direct lineage back to the original research the column names are taken from the features with the identical names in the original work.  The pattern is explained in the section above.
+</li>
+<li><b>Mean of Measurements</b>: The remaining 79 columns are the mean of selected smoothed sensor data produced by the original research.  To enable transparency and direct lineage back to the original research the column names are taken from the features with the identical names in the original work.  The pattern is explained in the section above.</li>
+</ul>
