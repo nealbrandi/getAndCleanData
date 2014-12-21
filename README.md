@@ -63,6 +63,9 @@ After executing the run_analysis() function 3 levels of data are available:
 <li>The original sensor data gathered by the researchers conducting the HAR experiments.  This data is classified as either test or training.  This data will be in the expanded folder structure, specifically within the folder UCI HAR Dataset, sub folder test or train respectively, and finally within the Inertial Signals sub folder.</li> 
 <li>The researchers smoothed representations of the sensor data.  This data is in the second level of the expanded folder structure above.</li>
 <li>The second level summarization of the research product, tidy.text.</li>  
-<ul>
+</ul>
 
-Use the following command to read tidy.txt into R from your work directory: tidy <- read.table("getAndCleanData/courseProject/tidy.txt", header=TRUE, stringsAsFactors=FALSE)    
+Use the following command to read tidy.txt into R from your work directory: 
+<ul>
+<li>read.table("getAndCleanData/courseProject/tidy.txt", header=TRUE, stringsAsFactors=FALSE)</li>    
+</ul>
