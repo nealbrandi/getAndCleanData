@@ -17,7 +17,15 @@ Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ort
 
 ### Dataset Description
 
-The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
+The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities:
+<ol>
+<li>WALKING</li>
+<li>WALKING_UPSTAIRS</li>
+<li>WALKING_DOWNSTAIRS</li>
+<li>SITTING</li>
+<li>STANDINGLAYING</li>
+</ol>
+while wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
 
 The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. 
 
@@ -26,12 +34,13 @@ Check the README.txt file for further details about this dataset.
 ### HAR Attribute Information
 
 For each record in the HAR dataset provides: 
-
-<b>Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.</b>
-<b>Triaxial Angular velocity from the gyroscope.</b>
-<b>A 561-feature vector with time and frequency domain variables.</b>
-<b>Its activity label.</li>
-<b>An identifier of the subject who carried out the experiment.</b>
+<ul>
+<li>Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.</li>
+<li>Triaxial Angular velocity from the gyroscope.</li>
+<li>A 561-feature vector with time and frequency domain variables.</li>
+<li>Its activity label.</li>
+<li>An identifier of the subject who carried out the experiment.</li>
+</ul>
 
 ## run_analysis.R
 
@@ -47,12 +56,13 @@ The function run_analysis() downloads the HAR database from the UCI Machine Lear
 
 ### tidy.txt
 
-This is the result dataset produced by run_analysis().  It contains 180 observations, one for each group of subject (30) and activity (6).  There are 81 columns consisting of the subject, activity and 79 mean computations that sumarize the research produced by the Human Activity Recognition project.  
+This is the result dataset produced by run_analysis().  It contains 180 observations, one for each group of subject (30) and activity (6).  There are 81 columns consisting of the subject, activity and 79 mean computations that sumarize the research produced by the Human Activity Recognition project.  See the codebook.md in this repo for a complete description.  
 
 After executing the run_analysis() function 3 levels of data are available:
-
-<b>The original sensor data gathered by the researchers conducting the HAR experiments.  This data is classified as either test or training.  This data will be in the expanded folder structure, specifically within the folder UCI HAR Dataset, sub folder test or train respectively, and finally within the Inertial Signals sub folder.</b> 
-<b>The researchers smoothed representations of the sensor data.  This data is in the second level of the expanded folder structure above.</b>
-<b>The second level summarization of the research product, tidy.text.</b>  
+<ul>
+<li>The original sensor data gathered by the researchers conducting the HAR experiments.  This data is classified as either test or training.  This data will be in the expanded folder structure, specifically within the folder UCI HAR Dataset, sub folder test or train respectively, and finally within the Inertial Signals sub folder.</li> 
+<li>The researchers smoothed representations of the sensor data.  This data is in the second level of the expanded folder structure above.</li>
+<li>The second level summarization of the research product, tidy.text.</li>  
+<ul>
 
 Use the following command to read tidy.txt into R from your work directory: tidy <- read.table("getAndCleanData/courseProject/tidy.txt", header=TRUE, stringsAsFactors=FALSE)    
